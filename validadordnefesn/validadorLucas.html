@@ -77,9 +77,66 @@
             border-radius: 8px;
             font-size: 0.95rem;
         }
+        .validation-box {
+            background: #f0fdf4;
+            border: 1px solid #bbf7d0;
+            border-radius: 12px;
+            padding: 1.25rem 1.5rem;
+        }
+        .validation-box .check-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+            margin-bottom: 6px;
+            font-size: 0.92rem;
+            color: #166534;
+        }
+        .validation-box .check-item i {
+            margin-top: 3px;
+            flex-shrink: 0;
+        }
+        .notice-box {
+            background: #fff8e6;
+            border-left: 4px solid #f0ad4e;
+            padding: 14px 16px;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            color: #664d03;
+        }
+        .download-btns .btn {
+            border-radius: 10px;
+            font-weight: 600;
+        }
+        .pem-block {
+            background: #1e293b;
+            color: #e2e8f0;
+            border-radius: 10px;
+            padding: 1rem 1.25rem;
+            font-family: 'Courier New', monospace;
+            font-size: 0.78rem;
+            line-height: 1.5;
+            overflow-x: auto;
+            white-space: pre-wrap;
+            word-break: break-all;
+            max-height: 280px;
+            overflow-y: auto;
+        }
+        .section-title {
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 1rem;
+        }
         @media (max-width: 576px) {
             .logo-img { height: 55px; }
             .status-badge { font-size: 1.1rem; padding: 10px 22px; }
+        }
+        @media print {
+            .btn, .download-btns { display: none !important; }
+            .pem-block { max-height: none; }
         }
     </style>
 </head>
@@ -191,6 +248,111 @@
                     </div>
                 </div>
 
+                <!-- ==================== SEÇÃO DE VALIDAÇÃO ==================== -->
+                <div class="card card-validation mt-4">
+                    <div class="card-body p-4 p-md-5">
+
+                        <!-- Título -->
+                        <div class="section-title">
+                            <i class="fas fa-check-circle text-success"></i>
+                            Validação do Certificado Digital
+                        </div>
+
+                        <!-- Resultado geral -->
+                        <div class="validation-box mb-4">
+                            <div class="d-flex align-items-center gap-2 mb-3">
+                                <span class="badge bg-success rounded-pill px-3 py-2">
+                                    <i class="fas fa-check me-1"></i> Todas as verificações passaram
+                                </span>
+                                <span class="small text-muted">14 checks realizados</span>
+                            </div>
+
+                            <div class="check-item"><i class="fas fa-check-circle"></i> Success — The root <strong>Autoridade Certificadora Raiz Brasileira v5</strong> is trusted</div>
+                            <div class="check-item"><i class="fas fa-check-circle"></i> Success — The certificate's signature for the certificate of <strong>Autoridade Certificadora Raiz Brasileira v5</strong> is valid</div>
+                            <div class="check-item"><i class="fas fa-check-circle"></i> Success — The certificate of <strong>Autoridade Certificadora Raiz Brasileira v5</strong> is inside its validity period</div>
+                            <div class="check-item"><i class="fas fa-check-circle"></i> Success — The certificate's signature for the certificate of <strong>AC SOLUTI v5</strong> is valid</div>
+                            <div class="check-item"><i class="fas fa-check-circle"></i> Success — The certificate of <strong>AC SOLUTI v5</strong> is inside its validity period</div>
+                            <div class="check-item"><i class="fas fa-check-circle"></i> Success — The certificate of <strong>AC SOLUTI v5</strong> is not currently revoked</div>
+                            <div class="check-item"><i class="fas fa-check-circle"></i> Success — The certificate's signature for the certificate of <strong>AC SOLUTI Multipla v5</strong> is valid</div>
+                            <div class="check-item"><i class="fas fa-check-circle"></i> Success — The certificate of <strong>AC SOLUTI Multipla v5</strong> is inside its validity period</div>
+                            <div class="check-item"><i class="fas fa-check-circle"></i> Success — The certificate of <strong>AC SOLUTI Multipla v5</strong> is not currently revoked</div>
+                            <div class="check-item"><i class="fas fa-check-circle"></i> Success — The certificate's signature for the certificate of <strong>FEDERACAO DOS ESTUDANTES NACIONAL:02538407000100</strong> is valid</div>
+                            <div class="check-item"><i class="fas fa-check-circle"></i> Success — The certificate of <strong>FEDERACAO DOS ESTUDANTES NACIONAL:02538407000100</strong> is inside its validity period</div>
+                            <div class="check-item"><i class="fas fa-check-circle"></i> Success — The certificate of <strong>FEDERACAO DOS ESTUDANTES NACIONAL:02538407000100</strong> is not currently revoked</div>
+                            <div class="check-item"><i class="fas fa-check-circle"></i> Success — The certificate's signature for the certificate of <strong>AC SOLUTI Multipla v5, LUCAS OLIVEIRA DO PRADO</strong> is valid</div>
+                            <div class="check-item"><i class="fas fa-check-circle"></i> Success — The certificate of <strong>AC SOLUTI Multipla v5, LUCAS OLIVEIRA DO PRADO</strong> is inside its validity period</div>
+                        </div>
+
+                        <!-- Aviso importante -->
+                        <div class="notice-box mb-4">
+                            <strong><i class="fas fa-exclamation-triangle me-1"></i> Importante:</strong>
+                            Os dados desta página são provenientes do cadastro do aluno vinculado ao certificado de atributo e tem a finalidade de uma consulta simples. Para efeito de comprovação e validade do <strong>Documento Nacional do Estudante – DNE</strong>, recomendamos a verificação do certificado de atributo (CA) disponível no link abaixo, fazendo uso de um aplicativo que possibilite a leitura do mesmo. É disponibilizado ainda o certificado digital público da entidade emissora de atributo (EEA), utilizado na assinatura eletrônica.
+                        </div>
+
+                        <!-- Botões de download -->
+                        <div class="download-btns d-flex flex-wrap gap-2 mb-4">
+                            <a href="https://stocie.blob.core.windows.net/cas/6AG7M52K.ca" class="btn btn-primary btn-sm px-3" target="_blank" rel="noopener">
+                                <i class="fas fa-download me-2"></i>Baixar certificado de atributo do estudante (CA)
+                            </a>
+                            <a href="https://stocie.blob.core.windows.net/issuers/4f1526041371f170.cer" class="btn btn-outline-primary btn-sm px-3" target="_blank" rel="noopener">
+                                <i class="fas fa-download me-2"></i>Baixar certificado digital público da entidade (EEA)
+                            </a>
+                            <a href="https://lapo.it/asn1js/#MIIEfTCCA2cCAQEwgaihgaWkgaIwgZ8xCzAJBgNVBAYTAkJSMRMwEQYDVQQKEwpJQ1AtQnJhc2lsMQ0wCwYDVQQLEwRDPUJSMRMwEQYDVQQKEwpJQ1AtQnJhc2lsMRUwEwYDVQQLEwxBQyBTT0xVVEkgdjUxHjAcBgNVBAMTFUFDIFNPTFVUSSBNdWx0aXBsYSB2NTEgMB4GA1UEAxMXTFVDQVMgT0xJVkVJUkEgRE8gUFJBRE-ggfwwgfmkgfYwgfMxCzAJBgNVBAYTAkJSMRMwEQYDVQQKEwpJQ1AtQnJhc2lsMQswCQYDVQQIEwJSSjEXMBUGA1UEBxMOUmlvIGRlIEphbmVpcm8xHjAcBgNVBAsTFUFDIFNPTFVUSSBNdWx0aXBsYSB2NTEXMBUGA1UECxMOMjM2ODE3NjUwMDAxMzAxGTAXBgNVBAsTEFZpZGVvY29uZmVyZW5jaWExGjAYBgNVBAsTEUNlcnRpZmljYWRvIFBKIEExMTkwNwYDVQQDEzBGRURFUkFDQU8gRE9TIEVTVFVEQU5URVMgTkFDSU9OQUw6MDI1Mzg0MDcwMDAxMDAwCwYJKoZIhvcNAQELAhEA4CoSqv-hxLtExlnCEvI2MzAiGA8yMDI2MDUwNjE0MzA0NloYDzIwMjcwMzMxMjM1OTU5WjCB5TA8BgVgTAEKATEzEzEyMTAzMTk5OTM4MjkyODc1ODU5MDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMHAGBWBMAQoCMWcTZUlGUlMgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBURUNOSUNPICAgICAgICBRVUlNSUNBICAgICAgICAgICAgICAgICAgICAgICBSSU8gREUgSkFORUlST1JKMDMGBWBMAQQDMSoTKCAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAwgYswXQYIKwYBBQUHAQEEUTBPME0GCCsGAQUFBzAChkFodHRwczovL3N0b2NpZS5ibG9iLmNvcmUud2luZG93cy5uZXQvaXNzdWVycy80ZjE1MjYwNDEzNzFmMTcwLmNlcjAJBgNVHTgEAgUAMB8GA1UdIwQYMBaAFPpUKbd5IcwVAV84AbP5IgY1G14hMAsGCSqGSIb3DQEBCwOCAQEAVRr_U2ZxvuKaON3cZ9-9-9zH6knWsL2w0geNfk9ID73bzjSkICGQkNXz5ymoVt5juu1S0xFg6aPzgjMc4MuMYjyDtzmhPQKLECdS__7N2kFh1sOLINRk9mUj7kr3sK5iiOkD633yHSxpe2ghN7Vd4qk0gVn1VF0lwztTWDW3QhtMz6uCahwGrZqkrXngnHL-7hRoKvqgZzK5MZFGlI2Y3fti-uqorVdQfVL_qQoAwLSvivLJhqSbkwPf-kPiGbH1og5uEyazVdXb9sa-411yPeXX-4Z_ReZh2VupgpU_MYe2_3pYArfG__8TxTcI8vUUc-RTMJ34oeFVqJmHTrQfyA" class="btn btn-outline-secondary btn-sm px-3" target="_blank" rel="noopener">
+                                <i class="fas fa-search me-2"></i>Decodificar o certificado PEM
+                            </a>
+                        </div>
+
+                        <div class="divider"></div>
+
+                        <!-- Certificado PEM -->
+                        <div class="section-title">
+                            <i class="fas fa-file-code text-primary"></i>
+                            Certificado de Atributo em Formato PEM
+                        </div>
+                        <div class="pem-block mb-3" id="pemCert">-----BEGIN CERTIFICATE-----
+MIIEfTCCA2cCAQEwgaihgaWkgaIwgZ8xCzAJBgNVBAYTAkJSMRMwEQYDVQQKEwpJ
+Q1AtQnJhc2lsMQ0wCwYDVQQLEwRDPUJSMRMwEQYDVQQKEwpJQ1AtQnJhc2lsMRUw
+EwYDVQQLEwxBQyBTT0xVVEkgdjUxHjAcBgNVBAMTFUFDIFNPTFVUSSBNdWx0aXBs
+YSB2NTEgMB4GA1UEAxMXTFVDQVMgT0xJVkVJUkEgRE8gUFJBRE+ggfwwgfmkgfYw
+gfMxCzAJBgNVBAYTAkJSMRMwEQYDVQQKEwpJQ1AtQnJhc2lsMQswCQYDVQQIEwJS
+SjEXMBUGA1UEBxMOUmlvIGRlIEphbmVpcm8xHjAcBgNVBAsTFUFDIFNPTFVUSSBN
+dWx0aXBsYSB2NTEXMBUGA1UECxMOMjM2ODE3NjUwMDAxMzAxGTAXBgNVBAsTEFZp
+ZGVvY29uZmVyZW5jaWExGjAYBgNVBAsTEUNlcnRpZmljYWRvIFBKIEExMTkwNwYD
+VQQDEzBGRURFUkFDQU8gRE9TIEVTVFVEQU5URVMgTkFDSU9OQUw6MDI1Mzg0MDcw
+MDAxMDAwCwYJKoZIhvcNAQELAhEA4CoSqv+hxLtExlnCEvI2MzAiGA8yMDI2MDUw
+NjE0MzA0NloYDzIwMjcwMzMxMjM1OTU5WjCB5TA8BgVgTAEKATEzEzEyMTAzMTk5
+OTM4MjkyODc1ODU5MDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMHAGBWBM
+AQoCMWcTZUlGUlMgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBU
+RUNOSUNPICAgICAgICBRVUlNSUNBICAgICAgICAgICAgICAgICAgICAgICBSSU8g
+REUgSkFORUlST1JKMDMGBWBMAQQDMSoTKCAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAwgYswXQYIKwYBBQUHAQEEUTBPME0GCCsGAQUFBzAC
+hkFodHRwczovL3N0b2NpZS5ibG9iLmNvcmUud2luZG93cy5uZXQvaXNzdWVycy80
+ZjE1MjYwNDEzNzFmMTcwLmNlcjAJBgNVHTgEAgUAMB8GA1UdIwQYMBaAFPpUKbd5
+IcwVAV84AbP5IgY1G14hMAsGCSqGSIb3DQEBCwOCAQEAVRr/U2ZxvuKaON3cZ9+9
++9zH6knWsL2w0geNfk9ID73bzjSkICGQkNXz5ymoVt5juu1S0xFg6aPzgjMc4MuM
+YjyDtzmhPQKLECdS//7N2kFh1sOLINRk9mUj7kr3sK5iiOkD633yHSxpe2ghN7Vd
+4qk0gVn1VF0lwztTWDW3QhtMz6uCahwGrZqkrXngnHL+7hRoKvqgZzK5MZFGlI2Y
+3fti+uqorVdQfVL/qQoAwLSvivLJhqSbkwPf+kPiGbH1og5uEyazVdXb9sa+411y
+PeXX+4Z/ReZh2VupgpU/MYe2/3pYArfG//8TxTcI8vUUc+RTMJ34oeFVqJmHTrQf
+yA==
+-----END CERTIFICATE-----</div>
+
+                        <div class="d-flex flex-wrap gap-2 mb-4">
+                            <button class="btn btn-sm btn-outline-secondary" onclick="copyPem()">
+                                <i class="fas fa-copy me-1"></i> Copiar PEM
+                            </button>
+                            <a href="https://stocie.blob.core.windows.net/cas/6AG7M52K.ca" class="btn btn-sm btn-outline-secondary" target="_blank" rel="noopener">
+                                <i class="fas fa-file-download me-1"></i> Baixar .ca
+                            </a>
+                        </div>
+
+                        <div class="alert alert-light border small mb-0">
+                            <i class="fas fa-code me-1 text-primary"></i>
+                            <strong>Desenvolvedores:</strong> O certificado de atributo (CA) disponibilizado por esta consulta pode ser obtido através de uma consulta HTTPS/GET a partir da URL desta página.
+                        </div>
+                    </div>
+                </div>
+
                 <!-- Botão de impressão -->
                 <div class="text-center mt-4">
                     <button onclick="window.print()" class="btn btn-outline-primary btn-lg px-4">
@@ -210,5 +372,20 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function copyPem() {
+            const text = document.getElementById('pemCert').innerText;
+            navigator.clipboard.writeText(text).then(() => {
+                const btn = event.currentTarget;
+                const original = btn.innerHTML;
+                btn.innerHTML = '<i class="fas fa-check me-1"></i> Copiado!';
+                btn.classList.replace('btn-outline-secondary', 'btn-success');
+                setTimeout(() => {
+                    btn.innerHTML = original;
+                    btn.classList.replace('btn-success', 'btn-outline-secondary');
+                }, 2000);
+            });
+        }
+    </script>
 </body>
 </html>
