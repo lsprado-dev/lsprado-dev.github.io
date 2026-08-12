@@ -22,21 +22,22 @@ function changeLanguage(lang) {
 document.addEventListener('DOMContentLoaded', () => {
     const currentPath = window.location.pathname;
 
-    // Se o usuário já entrou direto em uma subpasta, travo o estado da sessão.
-    // Isso garante que o index da raiz saiba que ele já foi direcionado e não force um loop.
-    if (currentPath.includes('/pt/') || currentPath.includes('/en/') || currentPath.includes('/es/') || currentPath.includes('/pl/')) {
+    // Pega exatamente a primeira pasta do caminho (ex: "pt", "en") para evitar falsos positivos
+    const pathSegment = currentPath.split('/')[1];
+    const supportedLangs = ['pt', 'en', 'es', 'pl'];
+
+    // Se o usuário está em uma pasta válida de idioma, blindamos a sessão
+    if (supportedLangs.includes(pathSegment)) {
         sessionStorage.setItem('lang_redirected', 'true');
     }
 
-    // Mantenho o <select> do HTML sincronizado visualmente com a URL atual (foco total na UX)
+    // Sincroniza o <select> sem risco de bugar se a URL for "/en/projeto-pt-br"
     const langSelect = document.getElementById('lang-select');
     if (langSelect) {
-        if (currentPath.includes('/pt/')) langSelect.value = 'pt';
-        else if (currentPath.includes('/en/')) langSelect.value = 'en';
-        else if (currentPath.includes('/es/')) langSelect.value = 'es';
-        else if (currentPath.includes('/pl/')) langSelect.value = 'pl';
-        else {
-            langSelect.value = 'en';
+        if (supportedLangs.includes(pathSegment)) {
+            langSelect.value = pathSegment;
+        } else {
+            langSelect.value = 'en'; // Fallback absoluto
         }
     }
 });
