@@ -32,10 +32,11 @@ body {
     font-family: var(--font-main);
     line-height: 1.6;
     overflow-x: hidden;
-    /* Toque Premium: Deixa as fontes mais nítidas e elegantes */
+    scrollbar-gutter: stable; /* 2026 CLS Fix: Evita pulos no layout por causa da barra de rolagem */
+    /* Toque Premium Seguro */
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    text-rendering: optimizeLegibility;
+    /* text-rendering removido: a CPU de celulares de entrada agradece e o FCP voa */
 }
 
 /* ================= ACESSIBILIDADE & PERFORMANCE (O Segredo do 100/100) ================= */
