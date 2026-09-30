@@ -80,7 +80,7 @@
     <div class="lang-switcher">
         <label for="lang-select" data-i18n="lang_label"><i class="fas fa-globe" aria-hidden="true"></i> Idioma:</label>
         <div class="custom-select-wrapper">
-            <select id="lang-select" onchange="window.location.href = '/' + this.value + '/';" aria-label="Selecione o idioma da página">
+            <select id="lang-select" onchange="changeLanguage(this.value);" aria-label="Selecione o idioma da página">
                 <option value="pt" selected>Português (PT)</option>
                 <option value="en">English (EN)</option>
                 <option value="es">Español (ES)</option>
