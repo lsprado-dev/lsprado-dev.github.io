@@ -31,7 +31,7 @@ Here are the main products highlighted in this portfolio:
 
 ## Technical Highlights & "Under the Hood"
 
-* **Advanced International SEO Architecture:** Instead of relying on Client-Side Rendering (which harms global indexation), the project uses a physical folder structure (`/en/`, `/es/`, `/pl/`) combined with `hreflang` tags. This ensures the Googlebot perfectly indexes and serves the localized version natively in each country.
+* **Advanced International SEO Architecture:** Instead of relying on Client-Side Rendering (which harms global indexation), the project uses a physical folder structure (`/pt/`, `/es/`, `/pl/`) combined with `hreflang` tags. This ensures the Googlebot perfectly indexes and serves the localized version natively in each country.
 * **Smart Global JS Router:** A Vanilla JS script intercepts the `navigator.language` API at the root level, identifies the user's OS native language, and instantly routes them (`window.location.replace`) to the correct localized folder, with a seamless fallback to English (`x-default`) for unsupported regions.
 * **Performance Obsession:** Extensive use of modern CSS features like `content-visibility: auto` for lazy rendering of off-screen sections, keeping the initial paint ridiculously fast. 
 * **A11y (The 100/100 Formula):** Perfect semantic structure (`<main>`, `<article>`), dynamic `aria-labels`, `focus-visible` states for keyboard navigation, `prefers-reduced-motion` media queries, and injected JSON-LD Schema.org to feed Google's Knowledge Graph.
