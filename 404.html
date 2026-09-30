@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - The Forbidden Page | Lucas Prado</title>
+    <meta name="theme-color" content="#0f0e17">
+    
+    <link rel="icon" type="image/png" sizes="32x32" href="/iconProjects/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Puxa o seu CSS da raiz -->
+    <link rel="stylesheet" href="/style.css"> 
+    
+    <style>
+        .error-section {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 2rem;
+            background: radial-gradient(circle at center, var(--bg-secondary) 0%, var(--bg-main) 70%);
+        }
+        .error-code {
+            font-size: 8rem;
+            font-weight: 700;
+            color: var(--purple-primary);
+            line-height: 1;
+            margin-bottom: 1rem;
+            text-shadow: 0 0 30px var(--purple-glow);
+        }
+        .error-message {
+            color: var(--text-light);
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+        .error-desc {
+            color: var(--text-gray);
+            font-size: 1.1rem;
+            max-width: 650px;
+            margin-bottom: 2.5rem;
+            line-height: 1.6;
+        }
+        .highlight {
+            color: var(--purple-primary);
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+
+    <main class="error-section">
+        <h1 class="error-code">404</h1>
+        <h2 class="error-message">Wait a minute...</h2>
+        <p class="error-desc">My slogan is literally <strong>"Less '404 error', more strategy."</strong> <br><br> So finding this page means you either stumbled upon the forbidden zone, or I owe you a coffee. With me, there are no dead ends — <span class="highlight">only solutions</span>.</p>
+        
+        <a href="/" class="btn-cta">Back to Strategy <i class="fas fa-arrow-right" style="margin-left: 8px;"></i></a>
+    </main>
+
+</body>
+</html>
