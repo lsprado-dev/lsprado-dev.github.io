@@ -40,4 +40,14 @@ document.addEventListener('DOMContentLoaded', () => {
             langSelect.value = 'en'; // Fallback absoluto
         }
     }
+
+    // ================= EASTER EGG RECRUITERS & DEVS =================
+    console.log(
+        "%cOpa, hold on a minute!", 
+        "font-size: 24px; font-weight: bold; color: #7f5af0; text-shadow: 1px 1px 2px #000;"
+    );
+    console.log(
+        "%cSe voce abriu o DevTools, you definitely know what you're doing (ou esbarrou no F12 sem querer).\n\nIf you are a recruiter or tech lead: Yes, I can center a div without crying, I care about web performance, and I'm ready for new challenges. Let's talk!\n\nSe voce e dev: Bora debater por 3 horas sobre qual framework JavaScript e o menos pior hoje em dia.\n\nMy GitHub: https://github.com/lsprado-dev", 
+        "font-size: 14px; color: #a7a9be; line-height: 1.6;"
+    );
 });

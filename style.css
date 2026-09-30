@@ -402,6 +402,7 @@ a { text-decoration: none; }
     top: 15px; 
     font-size: 1.1rem;
     font-weight: 700;
+    font-family: 'Fira Code', 'Courier New', Courier, monospace;
 }
 
 .score-val.green {
