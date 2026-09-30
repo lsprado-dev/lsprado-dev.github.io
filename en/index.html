@@ -9,25 +9,7 @@
     <meta name="description" content="Looking for a professional to build your website? Elite web engineering focused on fast sites (Performance 90+), top-tier SEO, and high conversion.">
     <meta name="author" content="Lucas Prado">
     
-    <script>
-        if (!sessionStorage.getItem('lang_redirected')) {
-            var userLang = navigator.language || navigator.userLanguage;
-            var prefix = userLang ? userLang.toLowerCase().substring(0, 2) : 'en';
-
-            sessionStorage.setItem('lang_redirected', 'true');
-
-            if (prefix === 'pt') {
-                window.location.replace('/pt/');
-            } else if (prefix === 'es') {
-                window.location.replace('/es/');
-            } else if (prefix === 'pl') {
-                window.location.replace('/pl/');
-            }
-            // Se for EN ou qualquer outro, o script não faz nada e o lead fica na raiz (que já é inglês).
-        }
-    </script>
-    
-    <link rel="canonical" href="https://lucasprado.space/">
+    <link rel="canonical" href="https://lucasprado.space/en/">
     <link rel="alternate" hreflang="pt" href="https://lucasprado.space/pt/" />
     <link rel="alternate" hreflang="en" href="https://lucasprado.space/" />
     <link rel="alternate" hreflang="es" href="https://lucasprado.space/es/" />
@@ -38,7 +20,7 @@
     <meta property="og:title" content="Lucas Prado | High-Performance Website Creation & SEO">
     <meta property="og:description" content="I turn code into high-conversion assets. Specialist in website creation with 100% Google-approved SEO.">
     <meta property="og:image" content="https://avatars.githubusercontent.com/u/210725531?v=4">
-    <meta property="og:url" content="https://lucasprado.space/">
+    <meta property="og:url" content="https://lucasprado.space/en/">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Lucas Prado">
 
@@ -47,9 +29,9 @@
     <meta name="twitter:description" content="I turn code into high-conversion assets. Specialist in website creation with 100% Google-approved SEO.">
     <meta name="twitter:image" content="https://avatars.githubusercontent.com/u/210725531?v=4">
     
-    <link rel="icon" type="image/png" sizes="32x32" href="iconProjects/favicon.png">
-    <link rel="icon" type="image/png" sizes="400x400" href="iconProjects/me.png">
-    <link rel="apple-touch-icon" href="iconProjects/favicon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../iconProjects/favicon.png">
+    <link rel="icon" type="image/png" sizes="400x400" href="../iconProjects/me.png">
+    <link rel="apple-touch-icon" href="../iconProjects/favicon.png">
     
     <meta name="theme-color" content="#0f0e17"> 
     
@@ -58,16 +40,15 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     
-    <link rel="stylesheet" href="style.css?v=18"> 
+    <link rel="stylesheet" href="../style.css?v=18"> 
 
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "ProfessionalService",
-      "@id": "https://lucasprado.space/#developer",
       "name": "Lucas Prado | Website Creation and SEO",
       "image": "https://avatars.githubusercontent.com/u/210725531?v=4",
-      "url": "https://lucasprado.space/",
+      "url": "https://lucasprado.space/en/",
       "telephone": "+48571090175",
       "priceRange": "$$$",
       "description": "Web developer and engineer focused on high-performance website creation (90+ on Lighthouse), extreme SEO optimization, and process automations for businesses.",
@@ -88,7 +69,7 @@
       "@context": "https://schema.org",
       "@type": "WebSite",
       "name": "Lucas Prado",
-      "url": "https://lucasprado.space/"
+      "url": "https://lucasprado.space/en/"
     }
     </script>
 </head>
@@ -96,10 +77,10 @@
 
     <a href="#conteudo-principal" class="skip-link" style="position:absolute; left:-9999px; z-index:999; padding:1em; background-color:#7f5af0; color:#fff; text-decoration:none;">Skip to content</a>
 
-   <nav class="lang-switcher" aria-label="Language selector">
+    <nav class="lang-switcher" aria-label="Language selector">
         <label for="lang-select" data-i18n="lang_label"><i class="fas fa-globe" aria-hidden="true"></i> Language:</label>
         <div class="custom-select-wrapper">
-            <select id="lang-select" onchange="changeLanguage(this.value);" aria-label="Select page language">
+            <select id="lang-select" onchange="window.location.href = this.value === 'en' ? '/' : '/' + this.value + '/';" aria-label="Select page language">
                 <option value="pt">Português (PT)</option>
                 <option value="en" selected>English (EN)</option>
                 <option value="es">Español (ES)</option>
@@ -112,7 +93,7 @@
         <div class="container hero-content">
             
             <div class="profile-image-container">
-                <img src="iconProjects/profilelucas.webp" alt="Profile photo of Lucas Prado" width="200" height="200" class="profile-img" fetchpriority="high">
+                <img src="../iconProjects/profilelucas.webp" alt="Profile photo of Lucas Prado" width="200" height="200" class="profile-img">
             </div>
 
             <a href="https://chromewebstore.google.com/search/lucasprado.space" target="_blank" rel="noopener noreferrer" class="verified-badge" aria-label="Google Verified Developer Badge" data-i18n="verified_badge">
@@ -153,7 +134,7 @@
                     
                     <article class="project-card">
                         <div class="card-header-clean">
-                            <img src="iconProjects/innov.png" alt="Innovative Business client logo" width="90" height="45" class="clean-icon" loading="lazy" decoding="async">
+                            <img src="../iconProjects/innov.png" alt="Innovative Business client logo" width="90" height="45" class="clean-icon" loading="lazy" decoding="async">
                             <h3>Innovative Business</h3>
                         </div>
                         <p data-i18n="proj1_desc">Corporate website developed for an accounting firm. Focused on presenting corporate services clearly, professionally, and quickly.</p>
@@ -198,7 +179,7 @@
                         </div>
                         
                         <div class="audit-link">
-                            <a href="https://pagespeed.web.dev/analysis/https-www-innovbusiness-com-br/zbnpwslszw?form_factor=desktop" target="_blank" rel="noopener noreferrer nofollow">
+                            <a href="https://pagespeed.web.dev/analysis/https-www-innovbusiness-com-br/zbnpwslszw?form_factor=desktop" target="_blank" rel="noopener noreferrer">
                                 <i class="fas fa-shield-check" aria-hidden="true"></i> <span data-i18n="lbl_fonte">Source: Google PageSpeed Insights Audit</span>
                             </a>
                         </div>
@@ -210,7 +191,7 @@
 
                     <article class="project-card">
                         <div class="card-header-clean">
-                            <img src="iconProjects/oliveira.png" alt="Oliveira & Sales law firm logo" width="90" height="45" class="clean-icon" id="icon-oliveira" loading="lazy" decoding="async">
+                            <img src="../iconProjects/oliveira.png" alt="Oliveira & Sales law firm logo" width="90" height="45" class="clean-icon" id="icon-oliveira" loading="lazy" decoding="async">
                             <h3>Oliveira & Sales</h3>
                         </div>
                         <p data-i18n="proj2_desc">Web platform for a law firm. Design focused on conveying legal security and facilitating direct contact with the lawyers.</p>
@@ -267,12 +248,12 @@
 
                     <article class="project-card">
     <div class="card-header-clean">
-        <img src="iconProjects/equity.png" alt="Logotipo da Equity Imóveis" width="90" height="45" class="clean-icon" id="icon-equity" loading="lazy" decoding="async" style="object-fit: contain;">
+        <img src="../iconProjects/equity.png" alt="Logotipo da Equity Imóveis" width="90" height="45" class="clean-icon" id="icon-equity" loading="lazy" decoding="async" style="object-fit: contain;">
         <h3>Equity Imóveis</h3>
     </div>
     <p data-i18n="proj3_desc">High-end real estate agency featuring intelligent search (AJAX), market intelligence, and dynamic SEO for maximum visibility.</p>
     
-   <div class="card-scores" aria-label="Google Lighthouse audit scores for this site">
+    <div class="card-scores" aria-label="Google Lighthouse audit scores for this site">
         <div class="score-circle-wrapper" style="--pct: 91;">
             <svg class="score-svg" viewBox="0 0 36 36" aria-hidden="true">
                 <path class="circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
@@ -380,7 +361,7 @@
 
 <article class="project-card">
     <div class="card-header-clean">
-        <img src="iconProjects/almeida.png" alt="Reformas Almeida logo" width="90" height="45" class="clean-icon" loading="lazy" decoding="async" style="object-fit: contain;">
+        <img src="../iconProjects/almeida.png" alt="Reformas Almeida logo" width="90" height="45" class="clean-icon" loading="lazy" decoding="async" style="object-fit: contain;">
         <h3>Reformas Almeida</h3>
     </div>
     <p>Corporate website developed for a remodeling and construction company. Conversion-focused, featuring a project gallery and modern design to attract high-end clients.</p>
@@ -442,7 +423,7 @@
                     
                     <article class="project-card saas-card" style="border: 2px solid #ff8906; grid-column: 1 / -1; background: linear-gradient(145deg, var(--bg-secondary) 0%, #110f18 100%);">
                         <div class="card-header-clean">
-                            <img src="iconProjects/innov.png" alt="Innovative SaaS Logo" width="90" height="45" class="clean-icon" loading="lazy" decoding="async">
+                            <img src="../iconProjects/innov.png" alt="Logotipo Innovative SaaS" width="90" height="45" class="clean-icon" loading="lazy" decoding="async">
                             <h3>Innovative Business Portal</h3>
                         </div>
                         <p data-i18n="saas1_desc" style="font-size: 1.05rem; color: var(--text-light); margin-bottom: 1.5rem;">
@@ -483,7 +464,7 @@
                     
                     <article class="project-card special-card">
                         <div class="card-header-clean">
-                            <img src="iconProjects/cotacao.png" alt="Real-Time Exchange extension icon" width="90" height="45" class="clean-icon" loading="lazy" decoding="async">
+                            <img src="../iconProjects/cotacao.png" alt="Real-Time Exchange extension icon" width="90" height="45" class="clean-icon" loading="lazy" decoding="async">
                             <h3 data-i18n="proj3_title">Real-Time Exchange</h3>
                         </div>
                         <p data-i18n="proj3_desc">Tool for fast and precise access to global exchange rates, without impacting the browser.</p>
@@ -499,7 +480,7 @@
 
                     <article class="project-card special-card">
                         <div class="card-header-clean">
-                            <img src="iconProjects/smartcase.png" alt="SmartCase Pro extension icon" width="90" height="45" class="clean-icon" loading="lazy" decoding="async">
+                            <img src="../iconProjects/smartcase.png" alt="SmartCase Pro extension icon" width="90" height="45" class="clean-icon" loading="lazy" decoding="async">
                             <h3 data-i18n="proj4_title">SmartCase Pro (Format)</h3>
                         </div>
                         <p data-i18n="proj4_desc">The ultimate formatting tool. Convert text, clean data, and hide sensitive information. 100% local and secure.</p>
@@ -515,7 +496,7 @@
 
                     <article class="project-card special-card">
                         <div class="card-header-clean">
-                            <img src="iconProjects/polvo.png" alt="ClipOctaplus extension icon" width="90" height="45" class="clean-icon" loading="lazy" decoding="async">
+                            <img src="../iconProjects/polvo.png" alt="ClipOctaplus extension icon" width="90" height="45" class="clean-icon" loading="lazy" decoding="async">
                             <h3 data-i18n="proj5_title">ClipOctaplus</h3>
                         </div>
                         <p data-i18n="proj5_desc">Clipboard manager focused on privacy and productivity. Saves your history 100% locally.</p>
@@ -590,7 +571,7 @@
                 </div>
                 
                 <div class="services-logo" aria-hidden="true">
-                    <img src="iconProjects/logo.png" alt="" width="250" height="250" class="logo-watermark" loading="lazy" decoding="async">
+                    <img src="../iconProjects/logo.png" alt="" width="250" height="250" class="logo-watermark" loading="lazy" decoding="async">
                 </div>
             </div>
         </section>
@@ -622,6 +603,6 @@
         <i class="fab fa-whatsapp" aria-hidden="true"></i> Start a Project
     </a>
 
-    <script src="script.js?v=9"></script>
+    <script src="../script.js?v=9"></script>
 </body>
 </html>
