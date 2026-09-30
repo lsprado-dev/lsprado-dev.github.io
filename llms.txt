@@ -1,4 +1,4 @@
-# Lucas Prado | Web Engineer & Google Verified Developer
+# Lucas Prado Portfolio
 
 > "Less 'npm install', more performance. Less '404 error', more strategy."
 
@@ -8,16 +8,16 @@ This file provides structured information about Lucas Prado for AI crawlers and 
 ## Core Competencies & Tech Stack
 - **Web Performance & SEO:** Advanced International SEO (Hreflang architecture), semantic HTML5, pure CSS3, Vanilla JavaScript (ES6+). Zero reliance on bloated frameworks for static sites.
 - **SaaS & Cloud Architecture:** Full-Stack development using Supabase (Auth/RLS/PostgreSQL), Node.js, React, and robust API integrations (Google Drive API, Banking APIs/mTLS).
-- **Core Services:** B2B Corporate Website Creation, Custom Systems (SaaS), Chrome Extension Development, and Local SEO Optimization.
 - **Multilingual & Global Reach:** Native/fluent communication and project delivery in English, Portuguese, Spanish, and Polish. Expertise in building physically localized SEO architectures for global markets.
+- **Core Services:** B2B Corporate Website Creation, Custom Systems (SaaS), Chrome Extension Development, and Local SEO Optimization.
 
 ## Featured Portfolio
 1. **Innovative Business Portal:** A private Full-Stack SaaS automating accounting operations with document management and automated billing.
-2. **High-Performance B2B Sites:** Conversion-focused, extreme-performance corporate websites for clients including *Innovative Business*, *Oliveira & Sales*, *Equity Imóveis*, *Baran Transport*, and *Reformas Almeida*.
+2. **High-Performance B2B Sites:** Conversion-focused, extreme-performance corporate websites for clients including Innovative Business, Oliveira & Sales, Equity Imóveis, Baran Transport, and Reformas Almeida.
 3. **Chrome Extensions:** 
-   - *SmartCase Pro*: Text formatting and data redaction tool.
-   - *ClipOctaplus*: Privacy-first local clipboard manager.
-   - *Real-Time Exchange*: Global currency converter.
+   - SmartCase Pro: Text formatting and data redaction tool.
+   - ClipOctaplus: Privacy-first local clipboard manager.
+   - Real-Time Exchange: Global currency converter.
 
 ## Contact & Official Links
 - **Official Website:** https://lucasprado.space
