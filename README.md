@@ -6,7 +6,7 @@
 
 ## About the Project
 
-This is my personal portfolio, built to showcase not only my engineering projects (Chrome extensions, high-performance corporate websites) but also my business-oriented mindset (Marketing DNA). 
+This is my personal portfolio, built to showcase not only my engineering projects (Chrome extensions, high-performance corporate websites, and enterprise SaaS) but also my business-oriented mindset (Marketing DNA). 
 
 The main differentiator of this project is the conscious architectural choice to use **Vanilla JavaScript, Semantic HTML5, and Pure CSS3**. In an ecosystem obsessed with shipping 2MB React bundles for simple static landing pages, this portfolio proves a point: by mastering the core technologies, you can deliver a blazing-fast, highly accessible, multilingual, and scalable application. 
 
@@ -16,7 +16,9 @@ The result? **90+ Performance and 100/100 Accessibility & Best Practices on Goog
 
 Here are the main products highlighted in this portfolio:
 
-* **B2B Websites:** SEO-optimized corporate platforms focusing on UI/UX, brand authority, and lead generation (e.g., *Innovative Business*, *Oliveira & Sales*).
+* **Systems & SaaS (Enterprise):**
+  * **Innovative Business Portal:** A private Full-Stack SaaS platform built to automate accounting operations. Features secure Auth (Supabase/RLS), document management (Google Drive API recursive algorithms), and automated billing via mTLS banking integration (Banco Inter API).
+* **B2B Websites:** SEO-optimized corporate platforms focusing on UI/UX, brand authority, and lead generation (e.g., *Innovative Business*, *Oliveira & Sales*, *Equity Imóveis*, *Baran Transport*, and *Reformas Almeida*).
 * **Browser Extensions:**
   * **Câmbio Real-Time:** Quick and precise access to global currency rates directly from the browser without impacting performance.
   * **SmartCase Pro:** The ultimate developer tool for text formatting (camelCase, snake_case), data cleaning, and instantly redacting sensitive information.
