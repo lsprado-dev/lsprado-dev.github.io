@@ -12,31 +12,27 @@
     <script>
         if (!sessionStorage.getItem('lang_redirected')) {
             var userLang = navigator.language || navigator.userLanguage;
-            var prefix = userLang ? userLang.toLowerCase().substring(0, 2) : 'en'; // Pega as duas primeiras letras (ex: 'pt', 'es')
+            var prefix = userLang ? userLang.toLowerCase().substring(0, 2) : 'en';
 
-            // Marca que já redirecionou para evitar loop infinito
             sessionStorage.setItem('lang_redirected', 'true');
 
-            // Regras de redirecionamento
             if (prefix === 'pt') {
                 window.location.replace('/pt/');
             } else if (prefix === 'es') {
                 window.location.replace('/es/');
             } else if (prefix === 'pl') {
                 window.location.replace('/pl/');
-            } else {
-                // Qualquer outro idioma (ou inglês) cai na pasta /en/
-                window.location.replace('/en/');
             }
+            // Se for EN ou qualquer outro, o script não faz nada e o lead fica na raiz (que já é inglês).
         }
     </script>
     
     <link rel="canonical" href="https://lucasprado.space/">
     <link rel="alternate" hreflang="pt" href="https://lucasprado.space/pt/" />
-    <link rel="alternate" hreflang="en" href="https://lucasprado.space/en/" />
+    <link rel="alternate" hreflang="en" href="https://lucasprado.space/" />
     <link rel="alternate" hreflang="es" href="https://lucasprado.space/es/" />
     <link rel="alternate" hreflang="pl" href="https://lucasprado.space/pl/" />
-    <link rel="alternate" hreflang="x-default" href="https://lucasprado.space/en/" />
+    <link rel="alternate" hreflang="x-default" href="https://lucasprado.space/" />
 
     <meta property="og:locale" content="en_US">
     <meta property="og:title" content="Lucas Prado | High-Performance Website Creation & SEO">
@@ -103,7 +99,7 @@
    <nav class="lang-switcher" aria-label="Language selector">
         <label for="lang-select" data-i18n="lang_label"><i class="fas fa-globe" aria-hidden="true"></i> Language:</label>
         <div class="custom-select-wrapper">
-            <select id="lang-select" onchange="window.location.href = '/' + this.value + '/';" aria-label="Select page language">
+            <select id="lang-select" onchange="window.location.href = this.value === 'en' ? '/' : '/' + this.value + '/';" aria-label="Select page language">
                 <option value="pt">Português (PT)</option>
                 <option value="en" selected>English (EN)</option>
                 <option value="es">Español (ES)</option>

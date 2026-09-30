@@ -14,11 +14,11 @@
   </url>
 
   <url>
-    <loc>https://lucasprado.space/en/</loc>
-    <lastmod>2026-05-21</lastmod>
+    <loc>https://lucasprado.space/</loc>
+    <lastmod>2026-09-30</lastmod>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://lucasprado.space/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lucasprado.space/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://lucasprado.space/pt/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://lucasprado.space/en/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://lucasprado.space/es/"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://lucasprado.space/pl/"/>
   </url>

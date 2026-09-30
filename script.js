@@ -9,7 +9,7 @@ function changeLanguage(lang) {
     // Salvo a escolha manual na sessão atual para blindar o navegador contra loops de redirecionamento
     sessionStorage.setItem('lang_redirected', 'true');
     
-    const targetPath = `/${lang}/`;
+    const targetPath = lang === 'en' ? '/' : `/${lang}/`;
     const currentPath = window.location.pathname;
     const normalizedPath = currentPath.endsWith('index.html') ? currentPath.replace('index.html', '') : currentPath;
 
