@@ -18,7 +18,12 @@ Here are the main products highlighted in this portfolio:
 
 * **Systems & SaaS (Enterprise):**
   * **Innovative Business Portal:** A private Full-Stack SaaS platform built to automate accounting operations. Features secure Auth (Supabase/RLS), document management (Google Drive API recursive algorithms), and automated billing via mTLS banking integration (Banco Inter API).
-* **B2B Websites:** SEO-optimized corporate platforms focusing on UI/UX, brand authority, and lead generation (e.g., *Innovative Business*, *Oliveira & Sales*, *Equity Imóveis*, *Baran Transport*, and *Reformas Almeida*).
+* **B2B Websites & Niche Solutions:** High-performance, SEO-optimized corporate platforms tailored for distinct business sectors. Focused on UI/UX, brand authority, and targeted lead generation across multiple industries:
+  * **Accounting & Corporate Finance:** *Innovative Business* (Clear, professional service presentation).
+  * **Legal Services:** *Oliveira & Sales* (Design focused on legal security and direct client-lawyer contact).
+  * **Luxury Real Estate:** *Equity Imóveis* (AJAX smart search, market intelligence, and dynamic SEO).
+  * **Logistics & Industry:** *Baran Transport* (Local SEO dominance, product catalogs, and material calculators).
+  * **Architecture & Construction:** *Reformas Almeida* (Conversion-focused design with project galleries for high-end clients).
 * **Browser Extensions:**
   * **Câmbio Real-Time:** Quick and precise access to global currency rates directly from the browser without impacting performance.
   * **SmartCase Pro:** The ultimate developer tool for text formatting (camelCase, snake_case), data cleaning, and instantly redacting sensitive information.
